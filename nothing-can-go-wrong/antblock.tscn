@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqkv0sg1e4uo1"]
+
+[ext_resource type="Texture2D" uid="uid://dm1myunr4kkks" path="res://graphicks/antblock.png" id="1_egkab"]
+
+[node name="Antblock" type="Sprite2D"]
+z_index = 1
+texture = ExtResource("1_egkab")
