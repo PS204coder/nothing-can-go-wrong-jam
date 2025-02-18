@@ -1,7 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqkv0sg1e4uo1"]
+[gd_scene load_steps=4 format=3 uid="uid://dqkv0sg1e4uo1"]
 
+[ext_resource type="Script" path="res://antblocktsc.gd" id="1_3hw1t"]
 [ext_resource type="Texture2D" uid="uid://dm1myunr4kkks" path="res://graphicks/antblock.png" id="1_egkab"]
 
-[node name="Antblock" type="Sprite2D"]
-z_index = 1
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1t085"]
+size = Vector2(50, 50)
+
+[node name="Area 2d" type="Area2D"]
+script = ExtResource("1_3hw1t")
+
+[node name="Antblock" type="Sprite2D" parent="."]
 texture = ExtResource("1_egkab")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1t085")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
