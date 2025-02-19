@@ -204,7 +204,7 @@ position = Vector2(0, 12.19)
 position = Vector2(0, 287)
 texture = ExtResource("3_xm1x8")
 
-[node name="Ant Block" type="TextureButton" parent="Inventoryblock/InventoryBg"]
+[node name="Ant Block" type="TextureButton" parent="Inventoryblock/InventoryBg" groups=["Buttons"]]
 anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
@@ -265,7 +265,7 @@ texture_normal = ExtResource("4_75tq4")
 position = Vector2(228, -0.190002)
 texture = ExtResource("8_omxei")
 
-[node name="Eraser" type="TextureButton" parent="Inventoryblock/InventoryBg"]
+[node name="Eraser" type="TextureButton" parent="Inventoryblock/InventoryBg" groups=["Buttons"]]
 offset_left = 203.0
 offset_top = -25.19
 offset_right = 253.0
@@ -278,4 +278,5 @@ script = ExtResource("10_tnrm2")
 
 [connection signal="pressed" from="Inventoryblock/InventoryBg/Ant Block" to="Inventoryblock/InventoryBg/Ant Block" method="_on_pressed"]
 [connection signal="pressed" from="Inventoryblock/InventoryBg/Ant Block" to="Inventoryblock/InventoryBg/Eraser" method="_on_ant_block_pressed"]
+[connection signal="pressed" from="Inventoryblock/InventoryBg/Eraser" to="Inventoryblock/InventoryBg/Ant Block" method="_on_eraser_pressed"]
 [connection signal="pressed" from="Inventoryblock/InventoryBg/Eraser" to="Inventoryblock/InventoryBg/Eraser" method="_on_pressed"]

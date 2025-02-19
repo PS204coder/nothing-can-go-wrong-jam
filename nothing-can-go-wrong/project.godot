@@ -29,6 +29,7 @@ mouse_cursor/custom_image="res://graphicks/Mouse.png"
 [global_group]
 
 "Ant block"=""
+Buttons=""
 
 [input]
 

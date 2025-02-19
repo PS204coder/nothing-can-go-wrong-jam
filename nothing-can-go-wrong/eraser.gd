@@ -5,14 +5,9 @@ var x = false
 func _ready():
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Global.what_button_is_pressed != 0 and Global.what_button_is_pressed != 1:
-		disabled = true
-	else:
-		disabled = false
-
+	pass
 
 func _on_pressed():
 	if x == false and Global.what_button_is_pressed == 0:
@@ -26,4 +21,7 @@ func _on_pressed():
 
 
 func _on_ant_block_pressed():
-	pass
+	if Global.what_button_is_pressed == 1:
+		Global.what_button_is_pressed = 2
+	if Global.what_button_is_pressed == 2 and x == true:
+		button_pressed = true
