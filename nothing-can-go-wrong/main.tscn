@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://dnqy5y8co77wp"]
+[gd_scene load_steps=15 format=4 uid="uid://dnqy5y8co77wp"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_6kiml"]
 [ext_resource type="Texture2D" uid="uid://bfosy18kck5rv" path="res://graphicks/Sprite-sheet.png" id="1_mc4vn"]
@@ -7,6 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://bf0xooacogidu" path="res://graphicks/Inventory002.png" id="5_0ps5w"]
 [ext_resource type="Script" path="res://ant_block.gd" id="5_yrt78"]
 [ext_resource type="Texture2D" uid="uid://m6by1jm6y32b" path="res://graphicks/Inventory003.png" id="6_ulmxe"]
+[ext_resource type="Texture2D" uid="uid://c5w4psok7ulj0" path="res://graphicks/eraserbg.png" id="8_omxei"]
+[ext_resource type="Texture2D" uid="uid://dpggyptwup168" path="res://graphicks/eraser.png" id="9_o6h66"]
+[ext_resource type="Texture2D" uid="uid://b0udd1ionwfit" path="res://graphicks/eraser03.png" id="10_evwop"]
+[ext_resource type="Script" path="res://eraser.gd" id="10_tnrm2"]
+[ext_resource type="Texture2D" uid="uid://c5bevpimyy47f" path="res://graphicks/eraser02.png" id="11_nu8yc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnmyl"]
 texture = ExtResource("1_mc4vn")
@@ -256,4 +261,21 @@ grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("4_75tq4")
 
+[node name="Eraserbg" type="Sprite2D" parent="Inventoryblock/InventoryBg"]
+position = Vector2(228, -0.190002)
+texture = ExtResource("8_omxei")
+
+[node name="Eraser" type="TextureButton" parent="Inventoryblock/InventoryBg"]
+offset_left = 203.0
+offset_top = -25.19
+offset_right = 253.0
+offset_bottom = 24.81
+toggle_mode = true
+texture_normal = ExtResource("9_o6h66")
+texture_pressed = ExtResource("10_evwop")
+texture_hover = ExtResource("11_nu8yc")
+script = ExtResource("10_tnrm2")
+
 [connection signal="pressed" from="Inventoryblock/InventoryBg/Ant Block" to="Inventoryblock/InventoryBg/Ant Block" method="_on_pressed"]
+[connection signal="pressed" from="Inventoryblock/InventoryBg/Ant Block" to="Inventoryblock/InventoryBg/Eraser" method="_on_ant_block_pressed"]
+[connection signal="pressed" from="Inventoryblock/InventoryBg/Eraser" to="Inventoryblock/InventoryBg/Eraser" method="_on_pressed"]
