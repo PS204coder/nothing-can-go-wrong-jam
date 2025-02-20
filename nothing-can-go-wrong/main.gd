@@ -1,6 +1,13 @@
 extends Node2D
 
 var Antblock = preload("res://antblock.tscn")
+
+
+
+
+
+
+
 var x = 0
 var y = 0
 var centerblock = [-225 , -175 , -125 , -75 , -25 , 25 , 75 , 125 , 175 , 225]
@@ -8,10 +15,10 @@ var event_position_x = 0
 var event_position_y = 0
 var idx_id_update = false
 var idx = y * 10 + x
-@onready var timer = $Timer
 func _ready():
-	pass
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	var grp = ButtonGroup.new()
+	$Inventoryblock/InventoryBg/Eraser.button_group = grp
+	$Inventoryblock/InventoryBg/Ant_Block.button_group = grp
 @warning_ignore("unused_parameter")
 func _process(delta):
 	pass

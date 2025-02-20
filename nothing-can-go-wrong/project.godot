@@ -30,6 +30,7 @@ mouse_cursor/custom_image="res://graphicks/Mouse.png"
 
 "Ant block"=""
 Buttons=""
+buttons=""
 
 [input]
 

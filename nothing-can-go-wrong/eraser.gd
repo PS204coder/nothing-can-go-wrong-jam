@@ -1,27 +1,23 @@
 extends TextureButton
-
+@onready var ant_block = $"../Ant Block"
 var x = false 
+var z = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	print(Global.what_button_is_pressed)
 
 func _on_pressed():
-	if x == false and Global.what_button_is_pressed == 0:
+	if Global.what_button_is_pressed != 1:
 		Global.what_button_is_pressed = 1
-		x = true
 		Global.blockchosenid = 1
-	elif x == true:
-		Global.blockchosenid = 0
-		Global.what_button_is_pressed = 0
-		x = false
+	elif Global.what_button_is_pressed == 1: 
+		pass
 
 
 func _on_ant_block_pressed():
-	if Global.what_button_is_pressed == 1:
-		Global.what_button_is_pressed = 2
-	if Global.what_button_is_pressed == 2 and x == true:
-		button_pressed = true
+	pass
