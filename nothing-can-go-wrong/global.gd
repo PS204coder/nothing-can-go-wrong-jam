@@ -9,6 +9,8 @@ var deleted_blocks_idx = []
 var check_if_block_deleted = false
 var ant_block_count = 0
 var what_button_is_pressed = 0
+var inventory_visibility = true
+var where_ant_go_block_count
 
 func _ready():
 	pass

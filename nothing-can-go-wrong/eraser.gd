@@ -9,7 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(Global.what_button_is_pressed)
+	pass
 
 func _on_pressed():
 	if Global.what_button_is_pressed != 1:

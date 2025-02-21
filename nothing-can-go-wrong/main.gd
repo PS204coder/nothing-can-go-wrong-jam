@@ -1,7 +1,7 @@
 extends Node2D
 
 var Antblock = preload("res://antblock.tscn")
-
+var Direction_of_ants = preload("res://direction_of_ant.tscn")
 
 
 
@@ -28,7 +28,6 @@ func _input(event):
 		y = int((event.position.y - Global.topleft) / Global.mousesize)
 		var antblock = Antblock.instantiate()
 		idx = y * 10 + x
-		print(Global.blockchosenid, " ", Global.ant_block_count, " ", Global.board[idx]," ", idx, " ", Global.deleted_blocks_idx) 
 		if Global.blockchosenid == 2 and Global.ant_block_count < Global.ant_block_max and Global.board[idx] == 01 and Global.what_button_is_pressed == 2:
 			Global.ant_block_count += 1
 			antblock.position.x = centerblock[x]
@@ -36,7 +35,10 @@ func _input(event):
 			add_child(antblock)
 			Global.board[idx] = 02
 			
-			
-			
+	if Input.is_action_just_pressed("left mouse") and Global.blockchosenid == 10 and event.position.x >= 100 and event.position.x < 600 and event.position.y >= 100 and event.position.y < 600:
+		x = int((event.position.x - Global.topleft) / Global.mousesize)
+		y = int((event.position.y - Global.topleft) / Global.mousesize)
+		var direction_of_ants = Direction_of_ants.instantiate()
+		idx = y * 10 + x
 			
 			
