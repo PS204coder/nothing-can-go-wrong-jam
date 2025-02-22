@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0xp1ks17x5tm"]
+[gd_scene load_steps=6 format=3 uid="uid://b0xp1ks17x5tm"]
 
+[ext_resource type="Script" path="res://ant.gd" id="1_4r1xd"]
 [ext_resource type="Texture2D" uid="uid://qir0ul557ffw" path="res://graphicks/antwalk001.png" id="1_laark"]
 [ext_resource type="Texture2D" uid="uid://dx6r38cwk18hb" path="res://graphicks/antwalk002.png" id="2_dsje3"]
 [ext_resource type="Texture2D" uid="uid://bjjpi3krpsoth" path="res://graphicks/antwalk003.png" id="3_to8x7"]
@@ -27,9 +28,13 @@ animations = [{
 }]
 
 [node name="Ant" type="Node2D"]
+rotation = 1.5708
+script = ExtResource("1_4r1xd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 10
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_2fbme")
 animation = &"ant walk"
-frame_progress = 0.699543
+frame = 1
+frame_progress = 0.490464
