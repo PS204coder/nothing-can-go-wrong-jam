@@ -1,14 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://x1db1ic6a20o"]
+[gd_scene load_steps=4 format=3 uid="uid://x1db1ic6a20o"]
 
+[ext_resource type="Script" path="res://direction_of_ant.gd" id="1_iug54"]
 [ext_resource type="Texture2D" uid="uid://gjrp6qbqp4gq" path="res://graphicks/where ant go.png" id="1_lm1tl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q4akc"]
 size = Vector2(50, 50)
 
 [node name="Direction of ant" type="Area2D"]
+script = ExtResource("1_iug54")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_q4akc")
 
 [node name="WhereAntGo" type="Sprite2D" parent="."]
 texture = ExtResource("1_lm1tl")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
