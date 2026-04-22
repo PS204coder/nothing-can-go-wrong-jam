@@ -7,3 +7,6 @@ I tried to make a game about you placing diffrent type of blocks on a grid and t
 The goal of the game was to try to make the ants go from one side of the grid to the opposite but with every time you manage to do that somethign goes wrong and gives you an obstackle of some sorts for you to make the ants go around.
 
 With the limited blocks that you can place and diffrent types the game was gonna be a puzzle that gets more and more complicated quickly but unluckily I did not manage to finish the game.
+
+### Summary
+But at least I learned how grids work beacouse I had no idea but with the help of my dad I learned this important mechanic + I made some simple but nice looking graphicks.
